@@ -1,0 +1,13 @@
+@model mvc3.Models.NVBT
+
+<h1>this is my view</h1>
+
+<form action="UpdateNVBT?manhanvien=@Model.MaNhanVien" method="post">
+    Ma Thiet Bi : <input type="text" name="MaThietBi" value="@Model.MaThietBi" />
+    Ma Can Ho : <input type="text" name="MaCanHo" id="" value="@Model.MaCanHo"/>
+    Lan Thu : <input type="text" name="LanThu" value="@Model.LanThu"/>
+    Ngay Sua: <input type="datetime" name="NgayBaoTri" value="@Model.NgayBaoTri"/>
+
+    <input type="submit" value="submit" />
+</form>
+

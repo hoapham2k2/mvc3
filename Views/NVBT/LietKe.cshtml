@@ -1,0 +1,34 @@
+@model List<NVBT>
+
+  
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>MaThietBi</td>
+                <td>MaCanHo</td>
+                <td>LanThu</td>
+                <td>NgayBaoTri</td>
+                <td>ChucNang</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MaThietBi</td>
+                    <td>@item.MaCanHo</td>
+                    <td>@item.LanThu</td>
+                    <td>@item.NgayBaoTri</td>
+                    <td>
+
+                        <a href="Delete?MaNhanVien=@item.MaNhanVien&MaThietBi=@item.MaThietBi&MaCanHo=@item.MaCanHo&LanThu=@item.LanThu">Delete</a>         
+                        <a href="ViewNVBT?MaNhanVien=@item.MaNhanVien&MaThietBi=@item.MaThietBi&MaCanHo=@item.MaCanHo&LanThu=@item.LanThu">View</a>
+
+                        @* <a href="Delete?nvbt=@item">Delete</a>
+                        <a href="View?nvbt=@item">View</a> *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
